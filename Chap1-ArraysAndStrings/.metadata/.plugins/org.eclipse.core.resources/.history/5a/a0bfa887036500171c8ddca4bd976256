@@ -1,0 +1,12 @@
+
+public class URLify {
+
+	public String removeSpaces(String s){
+		int countSpaces=0;
+		int len=s.length();
+		for(int i=0;i<len;i++){
+			if(s.charAt(i)==' ')
+				countSpaces++;
+		}
+	}
+}

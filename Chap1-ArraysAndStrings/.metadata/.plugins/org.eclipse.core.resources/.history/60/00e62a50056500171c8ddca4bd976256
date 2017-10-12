@@ -1,0 +1,31 @@
+
+public class URLify {
+
+	public void removeSpaces(StringBuilder s){
+		int countSpaces=0,idx;
+		int trueLen=s.length();
+		for(int i=0;i<trueLen;i++){
+			if(s.charAt(i)==' ')
+				countSpaces++;
+		}
+		idx=trueLen+countSpaces*2;
+		for(int i=trueLen-1;i>=0;i--){
+			if(s.charAt(i)==' '){
+				s.setCharAt(idx-1,'0');
+				s.setCharAt(idx-2,'2');
+				s.setCharAt(idx-3,'%');
+				idx=idx-3;
+			}
+			else{
+				s.setCharAt(idx-1,s.charAt(i));
+				idx=idx-1;		
+			}
+		}
+		System.out.println("New string is:"+s.toString());
+	}
+	public static void main(String args[]){
+		StringBuilder myName = new StringBuilder("doma nokz  ");
+		URLify u=new URLify();
+		u.removeSpaces(myName);
+	}
+}

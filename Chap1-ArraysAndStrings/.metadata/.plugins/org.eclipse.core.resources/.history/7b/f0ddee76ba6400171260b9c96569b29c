@@ -1,0 +1,73 @@
+import java.util.ArrayList;
+import java.util.Enumeration;
+
+public class HashMap<K,V> {
+	private ArrayList<HashNode<K,V>> myHashTable;//the hash map
+	private int numOfBins;// number of bins in hash map
+	private int size;// current size of hash map
+	
+	//initialize the map to 10 bins if no size mentioned
+	public HashMap(){
+		this.numOfBins=10;
+		this.size=0;
+		initializeMap();
+	}
+	
+	//initialize the map to the size mentioned
+	public HashMap(int bins){
+		this.numOfBins=bins;
+		this.size=0;
+		initializeMap();
+	}
+	
+	//initialize the map
+	private void initializeMap(){
+		for(int i=0;i<numOfBins;i++){
+			myHashTable.add(null);
+		}
+	}
+	
+	private int getIndex(K key){
+		int hashCode=key.hashCode();
+		return hashCode*numOfBins;
+	}
+	//size of the map
+	public int sizeOfMap(){return size;}
+	
+	//if the map is empty or not check
+	public boolean isEmpty(){ return size==0;}
+	
+	//add to the map
+	public boolean add(){
+		
+		return false;
+	}
+	
+	//delete from the map
+	public boolean delete(){
+		
+		return false;
+	}
+	
+	//get the value of a particular key
+	public V getValue(K Key){
+		int idx = getIndex(Key);
+		HashNode<K,V> head = myHashTable.get(idx);
+		while(head!=null){
+			if(head.isKey(Key))
+				return head.getValue();
+			head=head.next();
+		}
+		return v;
+	}
+	
+	//get all the keys present in the map
+	public Enumeration<K> keys(){
+		
+	}
+	
+	//get all the elements present in the map
+	public Enumeration<V> elements(){
+		
+	}
+}

@@ -1,0 +1,54 @@
+import java.util.Arrays;
+import java.util.Hashtable;
+import java.util.Arrays;
+
+public class IsUnique {
+	public boolean check(String s){
+		//time complexity is O(N^2)
+		int len= s.length();
+		for (int i=0;i<len;i++){
+			for(int j=i+1;j<len;j++){
+				if(s.charAt(i)==s.charAt(j))
+					return false;
+			}
+		}
+		return true;
+	}
+	
+	public boolean checkWithHash(String s){
+		//time complexity of O(N)
+		Hashtable<Character,Integer> cu = new Hashtable<Character,Integer>();
+		int len= s.length();
+		for (int i=0;i<len;i++){
+			if(cu.containsKey(s.charAt(i))){
+				return false;
+			}
+			cu.put(s.charAt(i),1);
+		}
+		return true;
+	}
+	public boolean BinarySearch(char ch,String s, int start, int mid, int end){
+		if(ch==s.charAt(mid))
+			return true;
+		else if(ch<s.charAt(mid))
+			BinarySearch(ch,s,start,(start+mid)/2,mid);
+		else 
+			BinarySearch(ch,s,mid,(mid+end)/2,end);
+		return false;
+	}
+	public boolean checkWithBinary(String s){
+		int len= s.length();
+		Arrays.sort(s);
+		for (int i=0;i<len;i++){
+			BinarySearch(s.charAt(i),s,i+1,(i+len)/2,len);
+		}
+		return true;
+	}
+	 public static void main(String[] args)
+	    {
+		 String s="abghAsy";
+		 IsUnique iu=new IsUnique();
+		 System.out.println(iu.check(s.toLowerCase()));
+		 System.out.println(iu.checkWithHash(s.toLowerCase()));
+	    }
+}

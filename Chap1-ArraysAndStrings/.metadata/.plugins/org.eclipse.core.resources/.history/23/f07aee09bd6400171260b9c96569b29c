@@ -1,0 +1,31 @@
+
+public class HashNode<K,V> {
+     K key;
+     V value;
+     HashNode<K,V> next;
+     
+     public HashNode(K key, V value){
+    	this.key=key; 
+    	this.value=value;
+     }
+     
+     public boolean isKey(K Key){
+    	 return this.key==Key;
+     }
+     
+     public V getValue(){
+    	 return value;
+     }
+     
+     public K getKey(){
+    	 return key;
+     }
+     
+     public HashNode<K,V> next(){
+    	 return next;
+     }
+     
+     public void setNext(HashNode<K,V> temp){
+    	 this.next=temp;
+     }
+}
