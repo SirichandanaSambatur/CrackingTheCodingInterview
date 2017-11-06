@@ -1,4 +1,5 @@
-
+//Chapter 2- Problem 2.2
+//Author-Siri Chandana S
 public class ktolast {
 
 	int printKtolast(LinkedList first, int k){

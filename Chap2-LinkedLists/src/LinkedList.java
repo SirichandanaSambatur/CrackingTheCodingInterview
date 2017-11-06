@@ -1,4 +1,13 @@
-
+// Data Structure Linked List
+//Author- Siri Chandana S
+/* Methods implemented
+ * appendToTail(int d)- add the element to the end of the list
+ * appendToHead(int d)- add the element to the front of the list
+ * deleteNode(int d)- find the element in the list and delete it
+ * display()-show the contents of the linked list
+ * get(int idx)- returns the element present at the index
+ * addList(LinkedList list)- appends the linked list passed to the end of the linked list
+ */
 public class LinkedList {
 		Node head=null;
 		int count=0;
@@ -44,6 +53,7 @@ public class LinkedList {
 			}
 			return temp.data;
 		}
+		
 		Node addList(LinkedList list1){
 			Node temp=head;
 			if(head==null)

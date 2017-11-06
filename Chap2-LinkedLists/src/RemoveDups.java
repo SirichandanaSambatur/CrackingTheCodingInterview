@@ -1,4 +1,5 @@
-/* 2.1  Write a code to remove duplicates from an unsorted linked list*/
+/* Chapter 2- Problem 2.1  Write a code to remove duplicates from an unsorted linked list*/
+//Author- Siri Chandana S
 import java.util.HashSet;
 
 public class RemoveDups {

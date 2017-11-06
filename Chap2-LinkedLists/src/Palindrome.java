@@ -1,3 +1,6 @@
+//Chapter 2-Problem 2.6
+//Author- Siri Chandana S
+
 import java.util.*;
 public class Palindrome {
 	boolean checkP(LinkedList one){

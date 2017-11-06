@@ -1,4 +1,5 @@
-
+//Chapter 2- Problem 2.4
+//Author Siri Chandana S
 public class Partition {
 	LinkedList divideList(LinkedList head, int val){
 		System.out.println("Inside partition");

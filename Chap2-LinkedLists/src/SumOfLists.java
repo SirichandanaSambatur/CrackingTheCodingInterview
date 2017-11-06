@@ -1,3 +1,6 @@
+//Chapter 2- Problem 2.5
+//Author- Siri Chandana S
+
 import java.util.*;
 public class SumOfLists {
 	LinkedList reverseOrder(LinkedList first, LinkedList second){
