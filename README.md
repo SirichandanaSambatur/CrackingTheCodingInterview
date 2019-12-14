@@ -9,4 +9,4 @@ The following list of data structures are implemented-
 4) Queue
 
 ## Running the Project
-Download this project and import the root directory into Eclipse workspace. Each question is implemented with a separate and class. Each of these are tested using diferrent test cases and additional test cases can be added if required.
+Download this project and import the root directory into Eclipse workspace. Each question is implemented within seperate classes. Each solution is tested using diferrent test cases and additional test cases can be added if required.
